@@ -64,7 +64,6 @@ section {
 
 html,
 body {
-  height: 100%;
   min-width: 20rem;
 }
 
@@ -143,24 +142,13 @@ body {
 [class*=__container-fluid] {
   max-width: 120rem;
   margin: 0 auto;
-  padding-left: 50px;
-  padding-right: 50px;
-}
-@media (max-width: 1140px) {
-  [class*=__container-fluid] {
-    padding-left: calc(-230px + 280 * ((100vw - 20rem) / 820));
-  }
-}
-@media (max-width: 1140px) {
-  [class*=__container-fluid] {
-    padding-right: calc(-230px + 280 * ((100vw - 20rem) / 820));
-  }
+  padding: 0 3.125rem;
 }
 
 header {
   position: sticky;
   top: 0;
-  z-index: 50;
+  z-index: 100;
   background-color: inherit;
 }
 
@@ -174,7 +162,7 @@ main {
   min-height: 100%;
   display: flex;
   flex-direction: column;
-  overflow-y: hidden;
+  overflow-x: hidden;
 }
 
 button {
@@ -320,43 +308,22 @@ button {
 
 #first-screen {
   margin-bottom: 39px;
-}
-
-.slick-list {
-  overflow: hidden;
-  border-radius: 20px;
-}
-
-.slick-track {
-  display: flex;
-}
-
-.firstcreen-slider {
-  width: 100%;
   position: relative;
 }
-
-.first-screen__container-fluid {
-  max-width: 120rem;
-  padding: 0;
+#first-screen .banner {
+  position: relative;
 }
-.first-screen__slider-item {
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+#first-screen .banner-item {
+  background: center/cover no-repeat;
+  padding: 170px 0px 60px 0px;
+  border-radius: 20px;
 }
-
-.slider-item__container {
-  display: flex;
-  align-items: center;
-  min-height: 700px;
-  padding: 75px 20px;
-  margin: 0 auto;
+#first-screen .banner-item__container {
+  min-height: 470px;
+  max-width: 1440px;
+  padding: 0 150px;
 }
-.slider-item__item-content {
-  min-width: 100%;
-}
-.slider-item__title {
+#first-screen .banner-item__title {
   font-weight: 700;
   font-size: 56px;
   max-width: 463px;
@@ -364,14 +331,14 @@ button {
   margin-bottom: 8px;
   line-height: 126%;
 }
-.slider-item__subtitle {
+#first-screen .banner-item__subtitle {
   font-weight: 300;
   font-size: 20px;
   line-height: 135.5%;
   max-width: 345px;
   margin-bottom: 37px;
 }
-.slider-item__btn {
+#first-screen .banner-item__button {
   display: flex;
   align-items: center;
   position: relative;
@@ -384,55 +351,82 @@ button {
   margin-top: 3rem;
   padding: 23px 94px 23px 33px;
 }
-.slider-item__btn:hover {
+#first-screen .banner-item__button:hover {
   background-color: rgb(137, 194, 73);
 }
-.slider-item__btn:active {
+#first-screen .banner-item__button:active {
   color: rgb(0, 25, 150);
   transform: scale(1.02);
 }
-.slider-item__btn-icon {
+#first-screen .banner-item__btn-icon {
   position: absolute;
-  right: 1.3125rem;
+  right: 21px;
 }
-
-.slick-arrow {
+#first-screen .banner-nav {
+  max-width: 1720px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
   position: absolute;
-  z-index: 2;
   top: 50%;
-  font-size: 0px;
-  color: #ffffff;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 0 100px;
 }
-
-.slick-prev {
-  left: 0;
+#first-screen .banner-nav .slick-arrow {
+  width: 46px;
+  height: 46px;
+  font-size: 0;
+  background-color: transparent;
+  border: none;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='42' viewBox='0 0 24 42' fill='none'%3E%3Cpath d='M3.40237 41.2538C3.1171 41.5391 2.76051 41.6817 2.36827 41.6817C1.97602 41.6817 1.61943 41.5391 1.33416 41.2538C0.763614 40.6833 0.763614 39.7561 1.33416 39.1856L19.5202 20.9996L1.33416 2.81351C0.763614 2.24296 0.763614 1.31583 1.33416 0.74529C1.9047 0.174747 2.83183 0.174747 3.40237 0.74529L22.6225 19.9654C23.1931 20.536 23.1931 21.4631 22.6225 22.0337L3.40237 41.2538Z' fill='white'/%3E%3C/svg%3E") center/22px 41px no-repeat;
 }
-
-.slick-next {
-  right: 0;
+#first-screen .banner-nav .slick-arrow:hover {
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='42' viewBox='0 0 24 42' fill='none'%3E%3Cpath d='M3.40237 41.2538C3.1171 41.5391 2.76051 41.6817 2.36827 41.6817C1.97602 41.6817 1.61943 41.5391 1.33416 41.2538C0.763614 40.6833 0.763614 39.7561 1.33416 39.1856L19.5202 20.9996L1.33416 2.81351C0.763614 2.24296 0.763614 1.31583 1.33416 0.74529C1.9047 0.174747 2.83183 0.174747 3.40237 0.74529L22.6225 19.9654C23.1931 20.536 23.1931 21.4631 22.6225 22.0337L3.40237 41.2538Z' fill='%2389C249'/%3E%3C/svg%3E") center/22px 41px no-repeat;
 }
-
-.slick-dots {
+#first-screen .banner-nav .slick-arrow.slick-prev {
+  transform: rotate(180deg);
+}
+#first-screen .slick-list {
+  overflow: hidden;
+}
+#first-screen .slick-track {
+  display: flex;
+}
+#first-screen .slick-dots {
   display: flex;
   justify-content: center;
   position: absolute;
   bottom: 2.4375rem;
-  right: calc(50% - 7.5rem);
+  right: calc(50% - 68px);
   margin: 0;
   padding: 0;
+  top: calc(100% - 51px);
 }
-
-.slick-dots li {
-  width: 8px;
-  height: 8px;
-  border-radius: 5.625rem;
+#first-screen .slick-dots li {
+  position: relative;
   opacity: 0.9;
   font-size: 0;
+  margin: 0 13px;
+  width: 8px;
+  height: 8px;
   border: 2px solid rgb(255, 255, 255);
-  margin: 0 1.625rem;
+  border-radius: 5.625rem;
+  list-style: none;
 }
-
-.slick-active {
+#first-screen .slick-dots li button {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  font-size: 0;
+  left: -2px;
+  top: -2px;
+  border-radius: 5.625rem;
+}
+#first-screen .slick-dots li button:hover {
+  background-color: rgb(255, 255, 255);
+}
+#first-screen .slick-dots li.slick-active {
   background-color: rgb(255, 255, 255);
 }
 
@@ -497,12 +491,13 @@ button {
 }
 
 .cooperation__container-fluid {
-  background: linear-gradient(0deg, #363a4d, #363a4d), #f7f7f7;
-  max-width: 113.75rem;
   width: 100%;
-  padding: 0px;
   border-radius: 1.25rem;
   border: none;
+}
+.cooperation__bg {
+  background: linear-gradient(0deg, #363a4d, #363a4d), #f7f7f7;
+  border-radius: 20px;
 }
 .cooperation__inner {
   display: flex;
@@ -558,7 +553,7 @@ button {
 
 .cooperation__info-list {
   max-width: 33rem;
-  padding: 0.3125rem;
+  padding: 0 10px 0 10px;
   display: flex;
   flex-direction: column;
   margin: 0;
@@ -575,7 +570,7 @@ button {
   margin-bottom: 0px;
 }
 .cooperation__image {
-  padding: 5px;
+  padding: 0px;
 }
 .cooperation__image img {
   border-radius: 1.25rem;
@@ -617,7 +612,8 @@ button {
   display: flex;
   flex-direction: column;
   align-items: start;
-  margin-right: 90px;
+  max-width: 353px;
+  width: 100%;
 }
 .footer__logo {
   margin-bottom: 28px;
@@ -786,21 +782,53 @@ button {
   #first-screen {
     margin-bottom: 55px;
   }
-  .slider-item__container {
-    justify-content: center;
+  #first-screen .banner__container-fluid {
+    padding: 0;
   }
-  .slider-item__content {
+  #first-screen .banner__banner-item {
+    display: flex;
+  }
+  #first-screen .banner-item {
+    border-radius: 0;
+    min-height: calc(100vh - 70px - 55px + 55px);
+    padding: 90px 0;
+  }
+  #first-screen .banner-item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0deg, rgba(4, 5, 17, 0), rgba(4, 5, 17, 0.1));
+  }
+  #first-screen .banner-item__container {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    max-width: 1180px;
+    height: 100%;
+    margin: auto;
+    margin-top: -10vh;
+    padding: 0 20px;
+    z-index: 1;
   }
-  .slider-item__title {
+  #first-screen .banner-item__title {
     text-align: center;
     font-size: 2.25rem;
+    max-width: 335px;
+    margin-bottom: 10px;
   }
-  .slider-item__subtitle {
+  #first-screen .banner-item__subtitle {
     text-align: center;
     font-size: 1rem;
+    margin-bottom: 18px;
+    max-width: 335px;
+  }
+  #first-screen .banner-item__button {
+    margin: 0;
   }
   #about-company {
     margin-bottom: 2.125rem;
@@ -829,8 +857,14 @@ button {
     font-size: 1rem;
     line-height: 149%;
   }
+  .cooperation #cooperation {
+    margin-bottom: 55px;
+  }
   .cooperation__container-fluid {
     padding: 0;
+  }
+  .cooperation__bg {
+    border-radius: 0px;
   }
   .cooperation__header {
     margin-bottom: 4.375rem;
@@ -856,6 +890,7 @@ button {
   }
   .cooperation__btn {
     padding: 1.4375rem 11.625rem 1.4375rem 2.0625rem;
+    margin-top: 29px;
   }
   .box-revers {
     flex-direction: column;
