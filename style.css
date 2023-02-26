@@ -180,11 +180,11 @@ button {
   flex: 0 0 auto;
   margin: 0;
   padding: 0;
+  z-index: 5;
 }
 
 .navbar-collapse {
   justify-content: space-between;
-  opacity: 0.9;
 }
 
 .navbar-nav {
@@ -253,6 +253,7 @@ button {
   position: relative;
   width: 27.5px;
   height: 25px;
+  z-index: 5;
   border: none;
   transition: all 0.3s ease;
 }
@@ -738,20 +739,39 @@ button {
     height: 4.375rem;
     padding: 0.9375rem 0;
     margin: 0;
+    position: relative;
   }
   .navbar-brand img {
     width: 80%;
   }
   .navbar-collapse {
+    position: fixed;
+    top: 55px;
+    left: 0px;
     display: flex;
     flex-direction: column;
     background-color: rgb(54, 58, 77);
-    margin: 0.9375rem 0 0;
+    margin: 15px 0 0 0;
+    width: 100vw;
+    box-shadow: 0 10vh 0 #282b38;
+    transition: all 0.4s linear;
+    z-index: 2;
+  }
+  .navbar-collapse::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(10px);
+    z-index: -2;
   }
   .navbar-nav {
     text-align: center;
     margin-top: 3.4375rem;
     padding: 0;
+    height: calc(70vh - 55px);
   }
   .nav-item {
     margin: 0 0 48px 0;
