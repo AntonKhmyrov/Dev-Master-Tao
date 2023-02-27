@@ -760,7 +760,7 @@ button {
   .navbar-collapse::before {
     content: "";
     position: fixed;
-    top: 0;
+    top: 70px;
     left: 0;
     width: 100%;
     height: 100%;
