@@ -31,6 +31,16 @@
         cssEase: 'linear',
         responsive: [
             {
+                breakpoint: 1200,
+                settings: {
+                    dots: false,
+                    arrows: true,
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+
+                }
+            },
+            {
                 breakpoint: 992,
                 settings: {
                     dots: true,
