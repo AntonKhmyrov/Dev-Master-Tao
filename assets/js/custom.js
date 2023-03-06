@@ -85,3 +85,14 @@
         ]
     })
  });
+
+    
+ const fileInput = document.getElementById("file");
+
+ fileInput.addEventListener("change", function() {
+   const fileName = this.value.split("\\").pop();
+   const fileExtension = fileName.split(".").pop();
+ 
+   const fileLabel = document.querySelector(".calculation__form-file-label");
+   fileLabel.textContent = `${fileName} (${fileExtension})`;
+ });
