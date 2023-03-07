@@ -1,3 +1,6 @@
+
+ // slider options 
+
  $(document).ready(function(){
     $('.banner').slick({
         dots: true,
@@ -29,7 +32,7 @@
         cssEase: 'linear',
         responsive: [
             {
-                breakpoint: 1200,
+                breakpoint: 1201,
                 settings: {
                     dots: false,
                     arrows: true,
@@ -86,7 +89,12 @@
     })
  });
 
-    
+// ------------------------------
+ 
+
+
+ // form download file
+
  const fileInput = document.getElementById("file");
 
  fileInput.addEventListener("change", function() {
@@ -96,3 +104,5 @@
    const fileLabel = document.querySelector(".calculation__form-file-label");
    fileLabel.textContent = `${fileName} (${fileExtension})`;
  });
+
+ // ------------------------------
