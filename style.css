@@ -224,6 +224,12 @@ section {
   transform: scale(1.02);
 }
 
+[class*=__btn-icon] {
+  width: 26px;
+  height: 26px;
+  right: 1em;
+}
+
 label {
   position: relative;
   font-weight: 600;
@@ -370,6 +376,11 @@ main {
   transform: translate(50%, 135%);
   margin: 0;
   padding: 0;
+}
+
+#faq,
+#cargo-options {
+  margin-bottom: 100px;
 }
 
 .navbar {
@@ -660,11 +671,7 @@ main {
 @media (max-width: 430px) {
   .calculation__button {
     padding: 23px 53px 23px 23px;
-    font-size: 13px;
-  }
-  .calculation__button .cooperation__btn-icon {
-    width: 20px;
-    height: 20px;
+    font-size: 16px;
   }
 }
 .calculation__images {
@@ -691,7 +698,7 @@ main {
   position: absolute;
   max-width: 100%;
   height: auto;
-  top: 0;
+  top: 60px;
   right: -60px;
 }
 .calculation__form-file-label {
@@ -1048,10 +1055,10 @@ main {
   justify-content: space-between;
 }
 .faq__form-question {
-  background: #363A4D;
+  background: #363a4d;
   box-shadow: 5px 15px 40px rgba(11, 24, 97, 0.32);
   border-radius: 20px;
-  padding: 38px 40px;
+  padding: 38px 20px;
   max-width: 390px;
   max-height: 573px;
 }
@@ -1080,7 +1087,7 @@ main {
   position: relative;
   border: none;
   margin-top: 12px;
-  padding: 23px 97px 23px 33px;
+  padding: 23px 65px 23px 33px;
 }
 .faq__btn-icon {
   position: absolute;
@@ -1150,7 +1157,7 @@ main {
   display: block;
   right: 0;
   top: -2px;
-  background: url(/assets/img/arrow-tabs-right.svg) no-repeat center;
+  background: url(./assets/img/arrow-tabs-right.svg) no-repeat center;
   width: 26px;
   height: 26px;
 }
@@ -1161,7 +1168,7 @@ main {
   display: block;
   right: 0;
   top: -2px;
-  background: url(/assets/img/arrow-tabs-top.svg) no-repeat center;
+  background: url(./assets/img/arrow-tabs-top.svg) no-repeat center;
   width: 26px;
   height: 26px;
 }
@@ -1229,7 +1236,6 @@ main {
 .block-adaptive {
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
 
 .cooperation__info-list {
@@ -1238,6 +1244,7 @@ main {
   display: flex;
   flex-direction: column;
   margin: 0;
+  text-align: justify;
 }
 .cooperation__info-item {
   font-weight: 300;
@@ -1264,7 +1271,8 @@ main {
   align-items: center;
   position: relative;
   margin-top: 3rem;
-  padding: 1.4375rem 5.875rem 1.4375rem 2.0625rem;
+  padding: 23px 75px 23px 33px;
+  max-width: 243px;
 }
 .cooperation__btn-icon {
   position: absolute;
@@ -1303,6 +1311,10 @@ main {
   line-height: 162.5%;
   color: rgb(255, 255, 255);
   transition: all 0.2s linear;
+}
+.footer__contact-list-link span {
+  text-align: center;
+  display: block;
 }
 .footer__contact-list-link:hover {
   color: #89c249;
@@ -1552,6 +1564,9 @@ main {
   .calculation__images {
     display: none;
   }
+  .calculation__form {
+    padding: 50px 30px 60px 30px;
+  }
   #services {
     margin-bottom: 54px;
   }
@@ -1636,6 +1651,10 @@ main {
   .cooperation__btn {
     padding: 1.4375rem 11.625rem 1.4375rem 2.0625rem;
     margin-top: 29px;
+  }
+  .cooperation__button {
+    width: 100%;
+    max-width: none;
   }
   .box-revers {
     flex-direction: column;
