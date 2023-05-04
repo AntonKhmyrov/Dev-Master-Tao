@@ -1313,7 +1313,7 @@ main {
   transition: all 0.2s linear;
 }
 .footer__contact-list-link span {
-  text-align: center;
+  text-align: start;
   display: block;
 }
 .footer__contact-list-link:hover {
@@ -1672,6 +1672,9 @@ main {
   }
   .footer__menu-block {
     display: none;
+  }
+  .footer__contact-list-link span {
+    text-align: center;
   }
   .faq__content {
     flex-direction: column;
